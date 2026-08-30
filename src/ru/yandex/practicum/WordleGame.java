@@ -73,7 +73,7 @@ public class WordleGame {
         String result = compareWords(word, answer);
         enteredWords.add(word);
         results.add(result);
-        steps --;
+        steps--;
 
         if (word.equals(answer)) {
             won = true;

@@ -81,12 +81,8 @@ public class Wordle {
 
     private static PrintWriter createLog() throws ProgramException {
         try {
-            BufferedWriter writer = Files.newBufferedWriter(
-                    Path.of(LOG_FILE),
-                    StandardCharsets.UTF_8,
-                    StandardOpenOption.CREATE,
-                    StandardOpenOption.APPEND
-            );
+            BufferedWriter writer = Files.newBufferedWriter(Path.of(LOG_FILE), StandardCharsets.UTF_8,
+                    StandardOpenOption.CREATE, StandardOpenOption.APPEND);
 
             return new PrintWriter(writer, true);
         } catch (IOException exception) {
